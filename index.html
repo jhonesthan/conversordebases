@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    <div class="box-form">
+        <form action="">
+
+            <h2>Conversor de base numérica</h2>
+            <!-- <label for="tipos_base">Selecione uma Base</label> -->
+                <select id="tipos_base" onchange="habi_desabi(this.value)">
+                    <option value="0" selected> Selecione Uma Base </option>
+                    
+                    <option value="10">Decimal</option>
+                    <option value="2">Binário</option>
+                    <option value="8">Octal</option>
+                    <option value="16">Hexadecimal</option>
+                </select>
+
+                <!-- entrada de valor decimal -->
+                <div class="box-box">
+                    <label for="ipt_decimal">Decimal:</label>
+                    <input type="text" id="ipt_decimal" onkeypress="return type_decimal(event);" disabled>
+                </div>
+
+                <!-- entrada de valor binário -->
+                <div class="box-box">    
+                    <label for="ipt_binario">Binário:</label>
+                    <input type="text" id="ipt_binario" onkeypress="return type_binario(event);" disabled>
+                </div>
+
+
+                <!-- entrada de valor octal -->
+                <div class="box-box">
+                    <label for="ipt_octal">Octal:</label>
+                    <input type="text" id="ipt_octal" onkeypress="return type_octal(event);" disabled>
+                </div>
+
+                <!-- entrada de valor hexadecimal -->
+                <div class="box-box">
+                    <label for="ipt_hexadecimal">Hexadecimal:</label>
+                    <input type="text" id="ipt_hexadecimal" onkeypress="return type_hexadecimal(event);" disabled>
+                </div>
+                <div class="container-btn">
+                    <!-- Botão para executar o cálculo -->
+                    <button type="button" onclick="chamar_calculo();" >Converter</button>
+                    <button type="reset" value="Limpar" onclick="habi_desabi()">Limpar </button>
+                    <!-- <button type="reset" value="Limpar" onclick="habi_desabi();" >Limpar</button> -->
+                </div>
+
+
+        </form>
+    </div>
+
+
+
+    
+</body>
+</html>
